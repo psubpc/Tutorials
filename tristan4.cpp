@@ -1,6 +1,5 @@
 #include <iostream>
 #include <sstream>
-#include <stdio.h>
 
 using namespace std;
 string tdata(string str,int max){
@@ -110,7 +109,7 @@ int main(){
 	
 	
 	// Average Grade Point
-   	printf("GRADE POINT AVERAGE: %.2f \n","",GPA);
+   	cout << "GRADE POINT AVERAGE: " << GPA << endl;
 	cout << "REMARKS: " << REMARKS << endl;
 	
 	//Exit Application
