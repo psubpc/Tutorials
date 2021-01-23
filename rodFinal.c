@@ -6,7 +6,8 @@ int main(){
 	
 	int i,j;
 	
-	input = 5;
+	printf("Enter a number: ");
+	scanf("%d",&input);
 	
 	for(i=0;i<input;i++){
 		
