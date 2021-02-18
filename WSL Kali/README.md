@@ -7,7 +7,8 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
  - [WSL Installation Alternative](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
  - [WSL GUI Tutorial](https://techcommunity.microsoft.com/t5/windows-dev-appconsult/running-wsl-gui-apps-on-windows-10/ba-p/1493242)
 
-
+# GLFW
+To compile and Execute C++ program with glfw using WSL Kali
 ### dependencies
 copy and paste to wsl terminal
 ```
