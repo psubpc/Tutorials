@@ -4,6 +4,7 @@ open powershell v2 as admin and type:
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
  - To install kali linux, download [Kali Distro](https://aka.ms/wsl-kali-linux-new), after downloading rename the file as `kali.appx` then type on powershell `Add-AppxPackage path\app_name.appx` then run kali. More to this tutorial, please follow [WSL2 installation](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and [WSL Offline installation](https://docs.microsoft.com/en-us/windows/wsl/install-manual) 
+ - [Manual Installation of Linux Distro for WSL](https://docs.microsoft.com/en-us/windows/wsl/install-manual)
  - [WSL Installation Alternative](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
  - [WSL GUI Tutorial](https://techcommunity.microsoft.com/t5/windows-dev-appconsult/running-wsl-gui-apps-on-windows-10/ba-p/1493242)
 
