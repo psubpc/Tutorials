@@ -8,12 +8,12 @@
 using namespace std;
 
 
-char path[255] = "clearance.txt";
+char path[255] = "clearance.txt"; // clearance filename/filepath
 int lineCount = 0;
 int x,y;
 string tmp_s;
 
-int bgy[1000];
+int bgy[1000]; // barangay clearance id
 string name[1000];
 int age[1000];
 string gender[1000];
@@ -25,8 +25,8 @@ string engine[3][1];
 string transmission[3][1];
 string displacement[3][1];
 string fuel[3][1];
-string payM[2];
-string payO[2];
+string payM[2]; // payment method
+string payO[2]; // payment option
 
 // Clearance File Line Count
 void getLinesCount(){
