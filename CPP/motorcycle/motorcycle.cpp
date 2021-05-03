@@ -1,10 +1,9 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
 #include <sstream>
 #include <string>
-#include <cctype>
-#include <algorithm>
+#include <cstring>
+#include <cmath>
 
 using namespace std;
 
@@ -29,14 +28,26 @@ string fuel[3][1];
 string payM[2];
 string payO[2];
 
-
+// Clearance File Line Count
 void getLinesCount(){
+	// initialize the variable 
+	// for temporary storage
+	// for string in the current line 
 	string currentText;
+	
+	// open clearance file
 	fstream file(path);
-	while (getline (file, currentText)) lineCount++;
+	
+	// line counter
+	while (getline (file, currentText)) {
+		lineCount++;
+	}
+	
+	// close clearance file
 	file.close();
 }
 
+// String to Integer Converter
 int stoii(string s){
 	stringstream toi(s);
 	int x = 0;
@@ -44,23 +55,46 @@ int stoii(string s){
 	return x;
 }
 
+
+// Convert Integer to String Converter
 string itosi(int i){
 	ostringstream s;
 	s << i;
 	return s.str();
 }
 
+// Convert Char to String
+string ctosi(char c[]){
+	ostringstream s;
+	s << c;
+	return s.str();
+}
+
+// Convert Char to LowerCase
 char asciitolower(char in) {
     if (in <= 'Z' && in >= 'A')
         return in - ('Z' - 'z');
     return in;
 }
 
-string tolowercase(string data){
-	transform(data.begin(), data.end(), data.begin(), asciitolower);
-	return data;
+// Convert String to LowerCase
+string tolowercase(string s){
+	int n = s.length();
+ 
+    // declaring character array
+    char char_array[n + 1];
+ 
+    // copying the contents of the
+    // string to char array
+    strcpy(char_array, s.c_str());
+ 
+    for (int i = 0; i < n; i++)
+        char_array[i] = asciitolower(char_array[i]);
+	
+	return ctosi(char_array);
 }
 
+// Parse Clearance file content
 void getClearance(){
 	string currentText;
 	string token;
@@ -71,8 +105,12 @@ void getClearance(){
 	for(x=0;x<lineCount;x++){
 		if(getline(file, currentText)){
 			istringstream currentToken(currentText);
-			vector<string> tokens;
-			while(getline(currentToken,token,' ')) tokens.push_back(token);
+			string tokens[5];
+			for(y=0;y<5;y++){
+				if(getline(currentToken,token,' ')){
+					tokens[y] = token;
+				}
+			}
 			bgy[x] = stoii(tokens[1]);
 			name[x] = tokens[2];
 			age[x] = stoii(tokens[3]);
@@ -223,14 +261,39 @@ int paymentOption(){
 	}
 }
 
+
+// installment price/monthly payment
+double toInstallment(double price){
+	double r = 0.02;
+	double n = 6;
+	double t = 12;
+	double formula = (n*price) + (n*price * (r/100));
+	double loan_pay = formula/(n*t);
+	return loan_pay;
+}
+
+
 int main() {
+	// Parse Clearance File
 	getClearance();
+	
+	// Get User Clearance ID or Name
 	int u = bgySearch(); 		// user id
+	
+	// Select Brand Menu
 	int b = brandMenu(); 		// brand
+	
+	// Select Model Menu
 	int m = modelMenu(b); 		// model
+	
+	// Select Payment Method
 	int pm = paymentMethod(); 	// payment method
+	
+	// Select Payment Option 
 	int po = paymentOption(); 	// payment option
 	
+	
+	// OUTPUT
 	cout << "\n\n==================================================" << endl;
 	cout << "RECIEPT" << endl;
 	cout << "No. " << bgy[u] << " " << name[u] << "\n" << endl;
@@ -238,12 +301,12 @@ int main() {
 	cout << "Brand\tModel\t\tPrice\tEngine Type\tTransmission Type\tDisplacement\tFuel Capacity\tPayment"<<endl;
 	cout << brand[b] << (b==1?"":"\t")
 		<< model[b][m] << "\t"
-		<< price[b][m] << "\t"
+		<< (po == 1 ? toInstallment(price[b][m]):price[b][m]) << "\t"
 		<< engine[b][m] << "\t"
 		<< transmission[b][m] << "\t\t\t"
 		<< displacement[b][m] << (b > 0 ? "\t\t": "\t")
 		<< fuel[b][m] << "\t\t"
-		<< payM[pm]
+		<< payM[pm] << "," << payO[po] 
 		<< endl;
 	
 	return 0;
