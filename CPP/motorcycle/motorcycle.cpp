@@ -121,6 +121,7 @@ void getClearance(){
 	file.close();
 }
 
+// Get User info using Clearance ID or Name
 int bgySearch(){
 	int uid;
 	bool invalid = true;
@@ -139,6 +140,7 @@ int bgySearch(){
 	return uid;
 }
 
+// Select Brand Menu
 int brandMenu(){
 	brand[0] = "Honda";
 	brand[1] = "Kawasaki";
@@ -161,6 +163,7 @@ int brandMenu(){
 	}
 }
 
+// Select Model Menu
 int modelMenu(int id){
 	//model
 	model[0][0] = "Honda CB300R";
@@ -217,6 +220,8 @@ int modelMenu(int id){
 	}
 }
 
+
+// Select Payment Method Menu
 int paymentMethod(){
 	payM[0] = "Cash";
 	payM[1] = "Credit Card";
@@ -239,6 +244,7 @@ int paymentMethod(){
 	}
 }
 
+// Select Payment Option Menu
 int paymentOption(){
 	payO[0] = "Fully Paid";
 	payO[1] = "Installment";
