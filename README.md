@@ -18,3 +18,13 @@ sudo apt install build-essential
  ```bash
  curl -o- -L https://yarnpkg.com/install.sh | bash
  ```
+### How to DISABLE Gnome and use Console only
+```bash
+sudo systemctl set-default multi-user
+gnome-session-quit
+```
+### How to ENABLE Gnome
+```bash
+sudo systemctl set-default graphical
+sudo systemctl start gdm3
+```
