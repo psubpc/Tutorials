@@ -28,3 +28,6 @@ gnome-session-quit
 sudo systemctl set-default graphical
 sudo systemctl start gdm3
 ```
+### CLI mode in ubuntu
+ - to switch in console mode press `ctrl + alt + f{1-6}`
+ - turn off gnome `sudo service gdm stop`
