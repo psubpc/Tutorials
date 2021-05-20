@@ -128,8 +128,6 @@ public class Main {
             // process user input
             if (answer.equalsIgnoreCase("N")) {
                 break;
-            } else {
-                oc++;
             }
 
         } while (true);
