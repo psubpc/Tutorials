@@ -4,6 +4,8 @@ This is a list of plugins that can be use in Sublime Text 3 in developing Vue.js
  - **[Terminus](https://packagecontrol.io/packages/Terminus)**
  - **[Vuejs Complete Package](https://packagecontrol.io/packages/Vuejs%20Complete%20Packages)**
  - **[Vuejs Snippets](https://packagecontrol.io/packages/Vuejs%20Snippets)**
+ - **[JsPrettier](https://packagecontrol.io/packages/JsPrettier)**
+ - **[HTML-CSS-JS Prettify](https://packagecontrol.io/packages/HTML-CSS-JS%20Prettify)**
 ## Optional
  - **[A File Icon](https://packagecontrol.io/packages/A%20File%20Icon)**
  - **[Theme - One](https://packagecontrol.io/packages/Theme%20-%20One)**
