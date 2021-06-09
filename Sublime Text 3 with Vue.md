@@ -25,12 +25,12 @@ Key binding for Terminus
 ```json
 [
 	{ 
-        "keys": ["ctrl+`"], "command": "toggle_terminus_panel", "args": {
-            "cwd": "$folder"
-        }
-    },
-    { "keys": ["ctrl+shift+w"], "command": "close_all" },
-    { "keys": ["ctrl+shift+l"], "command": "find_all_under" },
+		"keys": ["ctrl+`"], "command": "toggle_terminus_panel", "args": {
+		    "cwd": "$folder"
+		}
+	},
+	{ "keys": ["ctrl+shift+w"], "command": "close_all" },
+	{ "keys": ["ctrl+shift+l"], "command": "find_all_under" },
 	{ "keys": ["ctrl+f2"], "command": "find_all_under" },
 	{ "keys": ["alt+shift+i"], "command": "split_selection_into_lines" },
 	{ "keys": ["ctrl+b"], "command": "toggle_side_bar" },
