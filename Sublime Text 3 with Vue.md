@@ -21,3 +21,22 @@ Key binding for Terminus
   }
 }
 ```
+### My Prefered Keybindings
+```json
+[
+	{ 
+        "keys": ["ctrl+`"], "command": "toggle_terminus_panel", "args": {
+            "cwd": "$folder"
+        }
+    },
+    { "keys": ["ctrl+shift+w"], "command": "close_all" },
+    { "keys": ["ctrl+shift+l"], "command": "find_all_under" },
+	{ "keys": ["ctrl+f2"], "command": "find_all_under" },
+	{ "keys": ["alt+shift+i"], "command": "split_selection_into_lines" },
+	{ "keys": ["ctrl+b"], "command": "toggle_side_bar" },
+	{ "keys": ["ctrl+shift+b"], "command": "build" },
+	{ "keys": ["alt+up"], "command": "swap_line_up" },
+	{ "keys": ["alt+down"], "command": "swap_line_down" },
+	{ "keys": ["ctrl+w"], "command": "close_file" },
+]
+```
