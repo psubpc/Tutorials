@@ -36,3 +36,58 @@ Key binding for Terminus
 	{ "keys": ["ctrl+w"], "command": "close_file" },
 ]
 ```
+### Prefered Settings
+```json
+{
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace",
+		"*.log"
+	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".firebase",
+		".vscode"
+	],
+	"font_face": "Operator Mono",
+	"font_size": 10,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"index_exclude_patterns":
+	[
+		"*",
+		"*.log",
+		".*",
+		"node_modules",
+		"dist"
+	],
+	"index_files": false,
+	"update_check": false
+}
+
+```
